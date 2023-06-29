@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .header {
+  position: absolute;
+  width: 95%;
+  margin: 10px 2.5%;
+  height: 60px;
+  border: 2px solid black;
+  justify-content: space-between;
+  display: flex;
+}
+
+.main .header .timer {
+  width: 80px;
+  margin: 5px;
+  height: 40px;
+  background-color: black;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+}
+
+.main .header .image {
+  width: 40px;
+  margin: 5px;
+  height: 40px;
+  background-color: #999;
+  color: yellow;
+  font-size: 35px;
+  text-align: center;
+}
+
+.main .header .count {
+  width: 80px;
+  margin: 5px;
+  height: 40px;
+  background-color: black;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+}
+
+.main .mine {
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  display: grid;
+
+  width: 95%;
+  height: 85%;
+  background-color: rgb(180, 180, 180);
+  margin: auto;
+  margin-top: 80px;
+}
+
+.main .mine .dot {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(88, 88, 88);
+  box-shadow: 2px 2px 4px black;
+  cursor: pointer;
+}
+
+.main .mine .dot.clicked {
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+}

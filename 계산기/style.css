@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: grey;
+}
+
+.calc {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 550px;
+  background-color: black;
+  border-radius: 5%;
+}
+.calc .header {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  width: 300px;
+}
+
+.calc .header .ans {
+  width: 300px;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 60px;
+  text-align: end;
+  background-color: black;
+  color: white;
+  border-radius: 5%;
+  border: none;
+}
+
+.calc .btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 350px;
+  padding: 10px;
+  border-radius: 5%;
+  gap: 5px;
+}
+
+.calc .btns button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+}
+
+.calc .btns .tools {
+  background-color: rgb(170, 170, 170);
+}
+
+.calc .btns .nums {
+  background-color: #4d4d4d;
+  color: white;
+  font-size: 36px;
+}
+
+.calc .btns .nums#zero {
+  width: 100%;
+  border-radius: 50px;
+  grid-column: span 2;
+}
+.calc .btns .nums#dot {
+  grid-column: span 1;
+}
+
+.calc .btns .calc {
+  color: white;
+  background-color: #ff9100;
+}
+.calc .btns .calc#calculate {
+  grid-column: span 1;
+}
+
+.calc .btns .func {
+  background-color: #ff9100;
+  color: white;
+}
