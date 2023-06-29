@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: radial-gradient(rgb(155, 255, 108), rgb(54, 181, 255));
+  background: radial-gradient(rgb(255, 155, 158), rgb(154, 81, 205));
 }
 
 /* 전체 컨테이너를 가운데로 정렬 */
@@ -15,14 +15,16 @@ body {
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+  width: 700px;
   display: flex;
+  border: 10px solid black;
+  padding: 30px;
+  justify-content: space-between;
 }
 
 /* 메인 컨테이너 설정 */
 .container {
   width: 300px;
-  border: 2px solid black;
-  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -45,8 +47,7 @@ body {
 /* 알람 컨테이너 설정 */
 .items {
   width: 200px;
-  padding: 15px;
-  border: 2px solid black;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

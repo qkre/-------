@@ -1,3 +1,6 @@
+const bodyTag = document.querySelector("body");
+
+const wholeTag = document.querySelector(".whole");
 const containerTag = document.querySelector(".container");
 
 const timeTag = document.querySelector(".container .header .time");
@@ -23,8 +26,13 @@ const interval = setInterval(() => {
   currentBattery -= 1;
   timeTag.innerText = currentTimer;
   batteryTag.innerText = currentBattery + "%";
+  bodyTag.style.background = `radial-gradient(rgb(${155 + currentBattery}, ${
+    255 - currentBattery
+  }, ${108 + currentBattery / 2}), rgb(${54 + currentBattery}, ${
+    181 - currentBattery
+  }, ${255 - currentBattery / 2}))`;
   if (currentBattery == 0) {
-    containerTag.style.backgroundColor = "black";
+    wholeTag.style.backgroundColor = "black";
     alarmTimeTag.readOnly = true;
     toDoItemTag.readOnly = true;
     addBtnTag.disabled = true;
