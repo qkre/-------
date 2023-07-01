@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do Timer</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
   <body>
     <!-- whole 섹션은 가운데 정렬을 해주기 위한 섹션 -->
     <section class="whole">
+      <section class="title">Hello!</section>
       <section class="container">
         <section class="header">
-          <span class="time">시간</span>
+          <span class="time">00:00:00</span>
           <span class="battery">100%</span>
         </section>
         <section class="inputSection">
-          <input type="time" class="time" required />
-          <input type="text" class="item" required />
+          <input placeholder="HH:mm" class="time" required />
+          <input
+            placeholder="할 일을 적어주세요!"
+            type="text"
+            class="item"
+            required
+          />
           <button class="add">Add</button>
         </section>
       </section>
@@ -27,5 +38,5 @@
       </section>
     </section>
   </body>
-  <script src="app.js"></script>
+  <script src="mainApp.js"></script>
 </html>
