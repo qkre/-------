@@ -7,13 +7,16 @@ const userDB = [
   },
 ];
 
+// 메인 화면 태그 요소들
 const tags = {
+  bodyTag: document.querySelector("body"),
   userIdTag: document.querySelector(".container .loginSection #id"),
   userPwTag: document.querySelector(".container .loginSection #pw"),
   loginBtnTag: document.querySelector(".container .actionSection .loginBtn"),
   findPwBtnTag: document.querySelector(".container .actionSection .findPw"),
 };
 
+// 회원가입 팝업 태그 요소들
 const registerPopUpTags = {
   popUpTag: document.querySelector(".container .header #register"),
   userFirstNameTag: document.querySelector(".registerProfile #userFirstName"),
@@ -23,6 +26,7 @@ const registerPopUpTags = {
   registerBtnTag: document.querySelector(".registerProfile .registerBtn"),
 };
 
+// 비밀번호 찾기 팝업 태그 요소들
 const findPopUpTags = {
   popUpTag: document.querySelector(".container .actionSection #findPW"),
   userFirstNameTag: document.querySelector(".findPassword #userFirstName"),
@@ -31,6 +35,7 @@ const findPopUpTags = {
   findBtnTag: document.querySelector(".findPassword .findBtn"),
 };
 
+// 로그인 입력 유효성 검사
 function checkValidity() {
   if (!tags.userIdTag.checkValidity()) {
     alert("아이디를 입력하세요!");
@@ -43,6 +48,7 @@ function checkValidity() {
   return true;
 }
 
+// 회원가입 유효성 검사
 function registerValidity() {
   if (!registerPopUpTags.userFirstNameTag.checkValidity()) {
     alert("이름을 입력하세요!");
@@ -63,6 +69,7 @@ function registerValidity() {
   return true;
 }
 
+// 비밀번호 찾기 유효성 검사
 function findPwValidity() {
   if (!findPopUpTags.userFirstNameTag.checkValidity()) {
     alert("이름을 입력하세요!");
@@ -79,6 +86,7 @@ function findPwValidity() {
   return true;
 }
 
+// 태그 초기화
 function clearTags() {
   tags.userPwTag.value = null;
   registerPopUpTags.userFirstNameTag.value = null;
@@ -91,9 +99,8 @@ function clearTags() {
   findPopUpTags.userIdTag.value = null;
 }
 
+// 로그인 함수
 function checkUser() {
-  event.preventDefault();
-
   if (checkValidity()) {
     const targetIndex = userDB.findIndex(
       (user) => user.id === tags.userIdTag.value
@@ -116,6 +123,7 @@ function checkUser() {
   }
 }
 
+// 회원가입
 function registerUser() {
   if (registerValidity()) {
     if (userDB.some((user) => user.id === registerPopUpTags.userIdTag.value)) {
@@ -135,6 +143,7 @@ function registerUser() {
   }
 }
 
+// 비밀번호 찾기
 function findPassword() {
   if (findPwValidity()) {
     if (
@@ -159,5 +168,10 @@ function findPassword() {
 }
 
 tags.loginBtnTag.addEventListener("click", checkUser);
+
+// 엔터 키로 로그인하기
+tags.bodyTag.addEventListener("keydown", (e) => {
+  if (e.keyCode == 13) checkUser();
+});
 registerPopUpTags.registerBtnTag.addEventListener("click", registerUser);
 findPopUpTags.findBtnTag.addEventListener("click", findPassword);
