@@ -10,8 +10,7 @@ body {
 }
 
 /* 전체 컨테이너를 가운데로 정렬 */
-.whole,
-.wholeLogin {
+.whole {
   left: 50%;
   top: 50%;
   position: absolute;
@@ -27,26 +26,12 @@ body {
 }
 
 /* 메인 컨테이너 설정 */
-.container {
+.whole .container {
   width: 300px;
-  border: 2px solid black;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.wholeLogin .container .title {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.wholeLogin .container input,
-.wholeLogin .container button {
-  width: 80%;
-  margin-left: 10%;
 }
 
 /* 메인 헤더 영역 설정 */

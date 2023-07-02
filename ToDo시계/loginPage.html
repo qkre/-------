@@ -4,28 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoginPage</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loginStyle.css" />
+    <script
+      src="https://kit.fontawesome.com/0bff35fa4d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="wholeLogin">
+      <section class="title">
+        <span>To Do Clock</span>
+      </section>
       <section class="container">
-        <span class="title">To Do Clock</span>
-        <input
-          type="text"
-          id="id"
-          name="userID"
-          placeholder="Enter ID..."
-          required
-        />
-        <input
-          type="password"
-          id="pw"
-          name="userPW"
-          placeholder="Enter Password..."
-          required
-        />
-        <button class="login">Login</button>
-        <button class="register">Register</button>
+        <section class="header">
+          <span class="registerText">Don't have an account?</span>
+          <input type="checkbox" name="" id="register" />
+          <label for="register">Create Profile</label>
+          <div>
+            <div>
+              <label for="register">❌</label>
+              <section class="registerProfile">
+                <input
+                  type="text"
+                  name=""
+                  id="userFirstName"
+                  placeholder="Enter First Name..."
+                  required="required"
+                />
+                <input
+                  type="text"
+                  name=""
+                  id="userLastName"
+                  placeholder="Enter Last Name..."
+                  required="required"
+                />
+                <input
+                  type="text"
+                  name=""
+                  id="userID"
+                  placeholder="Enter ID..."
+                  required="required"
+                />
+                <input
+                  type="password"
+                  name=""
+                  id="userPW"
+                  placeholder="Enter Password..."
+                  required="required"
+                />
+                <button class="registerBtn">Register</button>
+              </section>
+            </div>
+            <label for="register"></label>
+          </div>
+        </section>
+        <section class="loginSection">
+          <div class="inputID">
+            <i class="fa-sharp fa-regular fa-envelope"></i>
+            <input
+              type="text"
+              id="id"
+              name="userID"
+              placeholder="Enter ID..."
+              required="required"
+            />
+          </div>
+          <div class="inputPW">
+            <i class="fa-solid fa-key"></i>
+            <input
+              type="password"
+              id="pw"
+              name="userPW"
+              placeholder="Enter Password..."
+              required="required"
+            />
+          </div>
+          <section class="actionSection">
+            <button class="loginBtn">Login</button>
+            <input type="checkbox" name="" id="findPW" />
+            <label for="findPW">Forgot password?</label>
+            <div>
+              <div>
+                <label for="findPW">❌</label>
+                <section class="findPassword">
+                  <input
+                    type="text"
+                    name=""
+                    id="userFirstName"
+                    placeholder="Enter First Name..."
+                    required="required"
+                  />
+                  <input
+                    type="text"
+                    name=""
+                    id="userLastName"
+                    placeholder="Enter Last Name..."
+                    required="required"
+                  />
+                  <input
+                    type="text"
+                    name=""
+                    id="userId"
+                    placeholder="Enter ID..."
+                    required="required"
+                  />
+                  <button class="findBtn">Find</button>
+                </section>
+              </div>
+              <label for="findPW"></label>
+            </div>
+          </section>
+        </section>
+        <div class="emptyBox"></div>
       </section>
     </div>
   </body>

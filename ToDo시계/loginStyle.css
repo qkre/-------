@@ -1,0 +1,277 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #525fe1;
+}
+
+.wholeLogin {
+  width: 800px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.wholeLogin .title {
+  width: 400px;
+  height: 100%;
+  background-color: #f86f03;
+  border-right: 2px solid black;
+  color: #fff6f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.container {
+  padding: 20px;
+  width: 400px;
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff6f4;
+}
+
+.container .header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+.container .header span {
+  padding-right: 10px;
+  font-size: 12px;
+  color: #ffa41b;
+  font-weight: bold;
+}
+
+.container .header input[id*="register"] {
+  display: none;
+}
+
+.container .header input[id*="register"] + label {
+  display: inline-block;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 12px;
+  padding: 5px;
+  background: #f86f03;
+  color: #fff6f4;
+}
+
+.container .header input[id*="register"] + label + div {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.container .header input[id*="register"]:checked + label + div {
+  display: block;
+}
+
+.container .header input[id*="register"] + label + div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background-color: #fff6f4;
+  z-index: 2;
+}
+
+.registerProfile {
+  padding: 10px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerProfile input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #f86f03;
+  color: black;
+}
+
+.registerProfile .registerBtn {
+  border: none;
+  border-radius: 5px;
+  padding-block: 5px;
+  padding-inline: 20px;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background-color: #f86f03;
+  color: #fff6f4;
+}
+
+.container .header input[id*="register"] + label + div > div > label {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(40%, -40%);
+  padding: 10px;
+  background: #f86f03;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.container .header input[id*="register"] + label + div > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container .loginSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .loginSection input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #f86f03;
+  color: black;
+}
+
+.container .actionSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .actionSection .loginBtn {
+  border: none;
+  border-radius: 5px;
+  padding-block: 5px;
+  padding-inline: 20px;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background-color: #f86f03;
+  color: #fff6f4;
+}
+
+.container .actionSection .findPW {
+  font-size: 12px;
+}
+
+.container .actionSection input[id*="findPW"] {
+  display: none;
+}
+
+.container .actionSection input[id*="findPW"] + label {
+  display: inline-block;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 12px;
+  padding: 5px;
+  color: #f86f03;
+}
+
+.container .actionSection input[id*="findPW"] + label + div {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.container .actionSection input[id*="findPW"]:checked + label + div {
+  display: block;
+}
+
+.container .actionSection input[id*="findPW"] + label + div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background-color: #fff6f4;
+  z-index: 2;
+}
+
+.container .actionSection input[id*="findPW"] + label + div > div > label {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(40%, -40%);
+  padding: 10px;
+  background: #f86f03;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.container .actionSection input[id*="findPW"] + label + div > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.findPassword {
+  padding: 10px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.findPassword input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #f86f03;
+  color: black;
+}
+
+.findPassword .findBtn {
+  border: none;
+  border-radius: 5px;
+  padding-block: 5px;
+  padding-inline: 20px;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background-color: #f86f03;
+  color: #fff6f4;
+}
