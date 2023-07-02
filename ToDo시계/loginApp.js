@@ -65,6 +65,12 @@ function registerValidity() {
   if (!registerPopUpTags.userPwTag.checkValidity()) {
     alert("패스워드를 입력하세요!");
     return false;
+  } else {
+    const pattern = /[^a-zA-Z0-9]/;
+    if (!pattern.test(registerPopUpTags.userPwTag.value)) {
+      alert("패스워드에 반드시 특수문자가 포함되어야 합니다!");
+      return false;
+    }
   }
   return true;
 }
