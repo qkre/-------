@@ -17,8 +17,8 @@ const tags = {
   // 할 일 목록을 비활성화하는 함수
   disableToDoList() {
     this.wholeTag.style.backgroundColor = "black"; // 배경색을 검정으로 변경
-    this.alarmTimeTag.readOnly = true; // 알람 시간 입력 필드 비활성화
-    this.toDoItemTag.readOnly = true; // 할 일 입력 필드 비활성화
+    this.alarmTimeTag.disabled = true; // 알람 시간 입력 필드 비활성화
+    this.toDoItemTag.disabled = true; // 할 일 입력 필드 비활성화
     this.addBtnTag.disabled = true; // 추가 버튼 비활성화
   },
 
